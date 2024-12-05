@@ -1,0 +1,111 @@
+/* Reset de márgenes y padding para evitar inconsistencias */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos del body */
+body {
+    background-color: #f4f7fb;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Estilo del encabezado */
+.navbar {
+    background-color: #158820; /* Color verde */
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar-title {
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Contenedor principal */
+.personal-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de la lista de Personal */
+.personal-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilos para cada item de la lista */
+.personal-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.personal-item:nth-child(even) {
+    background-color: #f1f6fb;
+}
+
+.personal-item .personal-key {
+    font-weight: bold;
+    font-size: 18px;
+    color: #1a3a5e;
+}
+
+.personal-item .personal-concept {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Diseño de la lista cuando hay muchas claves y conceptos */
+.personal-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Agregar espacio entre cada sección de la lista */
+.personal-item + .personal-item {
+    margin-top: 20px;
+}
+
+/* Diseño general para los títulos */
+h1, h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilo de enlaces (si los hubiera) */
+a {
+    color: #158820;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividad: estilo en pantallas pequeñas */
+@media (max-width: 768px) {
+    .personal-item {
+        padding: 10px;
+    }
+
+    .personal-key {
+        font-size: 16px;
+    }
+
+    .personal-concept {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,69 @@
+/* Elimina cualquier padding o margen global */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Asegúrate de que el body y html ocupen el 100% de la pantalla */
+    box-sizing: border-box;
+}
+
+/* Fondo y centrado del formulario en la sección de pagos */
+#pagos {
+    background: linear-gradient(to right, #007A3D, #F5E9DA);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura completa de la pantalla */
+    margin: 0; /* Eliminar cualquier margen extra */
+    padding: 0; /* Eliminar cualquier padding extra */
+}
+
+/* Contenedor del formulario */
+.form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.form-container h2 {
+    color: #000000;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Estilos de los inputs */
+.form-container select {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+/* Estilo del precio */
+.precio {
+    margin: 20px 0;
+    font-size: 18px;
+    color: #000000;
+}
+
+/* Estilo del botón */
+#pagarBoton {
+    width: 100%;
+    padding: 12px;
+    background-color: #000000; /* Botón negro */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+#pagarBoton:hover {
+    background-color: #363636; /* Un tono más claro de negro al pasar el mouse */
+}

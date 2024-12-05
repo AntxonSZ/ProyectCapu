@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Siniestro</title>
+    <link rel="stylesheet" href="estilos1.css">
+    <style>
+        /* Fondo degradado */
+        body {
+            background: linear-gradient(to right, #8A1538, #F5E9DA);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        /* Estilo del contenedor del formulario */
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            color: #8A1538;
+            font-size: 24px;
+        }
+
+        .form-container input,
+        .form-container select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .form-container input::placeholder {
+            color: #ccc;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            background: linear-gradient(to right, #8A1538, #6B0F29);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .form-container button:hover {
+            background: linear-gradient(to right, #6B0F29, #8A1538);
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Consulta tu siniestro</h2>
+        <form>
+            <input type="text" id="numeroSiniestro" name="numeroSiniestro" placeholder="Número de siniestro" required>
+            <select id="plazaCobro" name="plazaCobro" required>
+                <option value="" disabled selected>Selecciona tu plaza de cobro</option>
+                <option value="plaza1">Plaza 1</option>
+                <option value="plaza2">Plaza 2</option>
+                <option value="plaza3">Plaza 3</option>
+            </select>
+            <button type="submit">Consultar</button>
+        </form>
+    </div>
+</body>
+</html>

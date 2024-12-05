@@ -1,0 +1,359 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #8A1538;
+    padding: 10px 0;
+    color: white;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header-top ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.header-top a {
+    color: white;
+    text-decoration: none;
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #F5E9DA;
+}
+
+.logo {
+    margin: 0 30px;
+}
+
+/* Estilos para las imágenes en el header */
+.logo-gob {
+    width: 10%; /* Ajusta el tamaño de la imagen del gobierno LOGOM */
+    height: auto;
+    float: left; /* Alinea la imagen a la izquierda */
+    margin-right: 20px; /* Espacio entre la imagen y el contenido */
+}
+
+.logo {
+    width: 20%; /* Ajusta el tamaño de las imágenes de la SCT y CAPUFE */
+    height: auto;
+    margin-right: 10px; /* Añade un espacio entre las imágenes */
+}
+
+/* Estilos para la imagen del TAG IAVE */
+.banner img {
+    width: 50%; /* Ajusta el tamaño de la imagen del TAG IAVE */
+    height: auto;
+    margin: 20px 0; /* Añade margen arriba y abajo */
+}
+
+.banner {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #F5E9DA;
+}
+
+.banner h1 {
+    color: #007A3D;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos para la nueva barra de navegación */
+.main-nav {
+    background-color: #007A3D; /* Cambia este color según lo que desees */
+    padding: 10px 0;
+    text-align: center; /* Centra el contenido */
+}
+
+.main-nav ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Alinea los elementos al centro */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.main-nav a {
+    color: white; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado */
+    font-size: 16px;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.main-nav a:hover {
+    background-color: #00502A; /* Color cuando se pasa el mouse por encima */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilos para la sección de login */
+.login-section {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    margin-right: 20px; /* Espacio hacia la derecha */
+}
+
+.login-section a {
+    color: white; /* Color blanco para los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold;
+}
+
+.login-section a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+/* Para asegurar que la sección de login esté a la derecha */
+.header-top {
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos del header a los extremos */
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Estilos para alinear el login a la derecha */
+.header-top {
+    display: flex;
+    justify-content: space-between; /* Asegura que el contenido esté alineado a los extremos */
+    align-items: center;
+    padding: 0 20px;
+    position: relative; /* Necesario para el posicionamiento absoluto de la sección de login */
+}
+
+.login-section {
+    position: absolute;
+    right: 20px; /* Ajusta el margen derecho */
+    top: 50%; /* Para centrarlo verticalmente */
+    transform: translateY(-50%); /* Ajusta la posición vertical al centro */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el ícono y el texto */
+}
+
+.icono-login {
+    width: 30px; /* Ajusta el tamaño del ícono */
+    height: auto;
+    vertical-align: middle;
+    margin-right: 5px; /* Espacio entre el ícono y el texto */
+}
+
+
+/* Estilos del botón, sin borde */
+.dropbtn {
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    outline: none; /* Quitar borde al hacer clic */
+    display: inline-block; /* Alineado en línea con otros elementos */
+}
+
+/* Contenedor del dropdown */
+.dropdown {
+    display: inline-block; /* Mantener en línea con otros elementos */
+}
+
+/* Contenido del dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #e5e5e5;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Opciones del dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Mostrar el contenido al pasar el mouse */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Cambiar el color de las opciones al pasar el mouse */
+.dropdown-content a:hover {
+    background-color: #ffffff;
+}
+
+
+.consulta-siniestro {
+    background-color: #F5F5F5;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.consulta-siniestro h2 {
+    text-align: center;
+    color: #8A1538;
+}
+
+.consulta-siniestro label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.consulta-siniestro input,
+.consulta-siniestro select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.consulta-siniestro button {
+    background-color: #8A1538;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.consulta-siniestro button:hover {
+    background-color: #6B0F29;
+}
+
+
+#formularioConsulta {
+    margin-top: 50px; /* Ajusta según sea necesario */
+}
+
+
+
+
+/* Sección activa (visible) */
+.seccion-activa {
+    display: block;
+}
+
+/* Sección oculta (no visible) */
+.seccion-oculta {
+    display: none;
+}
+
+/* Asegurar que la sección de consulta se centre bien */
+.consulta-siniestro {
+    background-color: #F5F5F5;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 50px auto; /* Ajuste centrado verticalmente */
+}
+
+
+main section {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.seccion-activa {
+    opacity: 1;
+}
+
+.seccion-oculta {
+    display: none;
+}
+
+.seccion-activa {
+    display: block;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+ 
+
+/* Fondo degradado para la sección de pagos */
+#pagos {
+    background: linear-gradient(to right, #007A3D, #F5E9DA);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.form-container h2 {
+    color: #007A3D;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Estilos para los inputs */
+.form-container select {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+/* Estilo para el precio */
+.precio {
+    margin: 20px 0;
+    font-size: 18px;
+    color: #8A1538;
+}
+
+#pagarBoton {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #007A3D, #8A1538);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#pagarBoton:hover {
+    background: linear-gradient(to right, #8A1538, #007A3D);
+}
+
+

@@ -1,0 +1,282 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para el cuerpo */
+body {
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todo el contenido en el eje horizontal */
+    justify-content: flex-start; /* Asegura que todo comience desde arriba */
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+}
+
+/* Encabezado */
+.navbar {
+    background-color: #158820; /* Color verde */
+    padding: 20px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    position: fixed; /* Fija el encabezado en la parte superior */
+    top: 0; /* Posición superior */
+    left: 0; /* Alineación izquierda */
+    z-index: 10; /* Asegura que el encabezado quede por encima del formulario */
+}
+
+.navbar-title {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Formulario centrado */
+.quantifier-form {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 100px; /* Deja espacio debajo del encabezado fijo */
+    background-color: rgb(255, 255, 255);   /* Linea de código para cambiar el color del formulario */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.quantifier-form h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Secciones */
+.section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #dcdcdc9b;
+    border-radius: 8px;
+}
+
+.section h3 {
+    font-size: 22px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+/* Form-group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input[type="text"], input[type="number"], input[type="time"], input[type="date"], select, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Estilo de los botones */
+.submit-btn, .reset-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 48%;
+}
+
+.submit-btn {
+    background-color: #1a3a5e;
+    color: white;
+    border: none;
+}
+
+.submit-btn:hover {
+    background-color: #2c4b79;
+}
+
+.reset-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+}
+
+.reset-btn:hover {
+    background-color: #e53935;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .quantifier-form {
+        margin: 20px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .submit-btn, .reset-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .damage-btn {
+        width: 48%;
+    }
+}
+
+/* Estilos para el botón "Agregar otro daño" */
+.add-damage-btn {
+    background-color: #4CAF50;  /* Color verde de fondo */
+    color: white;               /* Texto blanco */
+    font-size: 16px;            /* Tamaño de fuente */
+    padding: 10px 20px;         /* Espaciado interno */
+    border: none;               /* Sin borde */
+    border-radius: 5px;         /* Bordes redondeados */
+    cursor: pointer;           /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, transform 0.2s ease;  /* Efectos de transición */
+    margin-top: 20px;           /* Margen superior para separarlo de otros elementos */
+    position: relative;         /* Habilitar la posición relativa */
+    top: -10px;                 /* Mover el botón 10px hacia arriba */
+}
+
+/* Efecto al pasar el ratón (hover) */
+.add-damage-btn:hover {
+    background-color: #45a049;  /* Color ligeramente más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Levantar ligeramente el botón */
+}
+
+/* Efecto al presionar (active) */
+.add-damage-btn:active {
+    background-color: #388e3c;  /* Color aún más oscuro al presionar */
+    transform: translateY(0);   /* Restablecer la posición al hacer clic */
+}
+
+/* Opcional: Añadir sombra al botón */
+.add-damage-btn:focus {
+    outline: none;              /* Eliminar el borde del enfoque por defecto */
+    box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);  /* Sombra verde suave */
+}
+
+
+
+
+/* Estilos para los nuevos recuadros debajo del total general */
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+
+
+
+
+
+/* Estilo para el botón de generar PDF */
+button[type="button"] {
+    background-color: #4CAF50;  /* Fondo verde */
+    color: white;               /* Texto blanco */
+    padding: 12px 24px;         /* Espaciado interno */
+    font-size: 16px;            /* Tamaño de la fuente */
+    border: none;               /* Sin borde */
+    border-radius: 6px;         /* Bordes redondeados */
+    cursor: pointer;           /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+    margin-top: 20px;           /* Margen superior para separarlo de otros elementos */
+    position: relative;         /* Habilitar la posición relativa */
+    top: -10px;                 /* Mover el botón 10px hacia arriba */
+    width: 100%;                /* El botón ocupará el 100% del ancho */
+}
+
+/* Efecto al pasar el ratón (hover) */
+button[type="button"]:hover {
+    background-color: #45a049;  /* Color verde ligeramente más oscuro */
+    transform: translateY(-2px); /* Levantar ligeramente el botón */
+}
+
+/* Efecto al presionar (active) */
+button[type="button"]:active {
+    background-color: #388e3c;  /* Color aún más oscuro al presionar */
+    transform: translateY(0);   /* Restablecer la posición al hacer clic */
+}
+
+/* Opcional: Añadir sombra al botón */
+button[type="button"]:focus {
+    outline: none;              /* Eliminar el borde del enfoque por defecto */
+    box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);  /* Sombra verde suave */
+}
+
+
+
+
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+

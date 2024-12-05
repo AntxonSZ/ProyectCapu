@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago de Peajes y Multas</title>
+    <link rel="stylesheet" href="Peajesymultas.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-top">
+        </div>
+    </header>
+
+    <main>
+        <section id="pagos">
+            <div class="form-container">
+                <h2>Paga tu Peaje o Multa</h2>
+                <form id="pagoFormulario">
+                    <!-- Seleccionar tipo de vehículo -->
+                    <label for="tipoVehiculo">Selecciona tu tipo de vehículo:</label>
+                    <select id="tipoVehiculo" name="tipoVehiculo" required onchange="mostrarPrecio()">
+                        <option value="" disabled selected>Selecciona tu vehículo</option>
+                        <option value="automovil">Automóvil - $85 MXN</option>
+                        <option value="trailer">Trailer - $93 MXN</option>
+                        <option value="moto">Motocicleta - $60 MXN</option>
+                        <option value="camioneta">Camioneta - $95 MXN</option>
+                        <option value="autobus">Autobús - $120 MXN</option>
+                    </select>
+        
+                    <!-- Muestra el precio con un título dinámico -->
+                    <div id="precioTotal" class="precio">
+                        <p id="tituloPrecio">Precio:</p>
+                        <p><span id="monto">$0</span> MXN</p>
+                    </div>
+        
+                    <!-- Botón de pago -->
+                    <button type="submit" id="pagarBoton">Pagar Ahora</button>
+                </form>
+            </div>
+        </section>
+        
+         
+    </main>
+
+    <script src="Pago.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+.input-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px; /* Ajusta el ancho máximo para los campos */
+    margin: 5px;
+}
+
+.input-label {
+    font-weight: bold;
+    background-color: #5d0f0f; /* Color para el encabezado de los apartados */
+    color: #fff;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+.input-row {
+    display: flex;
+    gap: 10px; /* Espacio entre los elementos */
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Alinea los elementos al inicio para que "Clave" y "Tipo de accidente" estén uno al lado del otro */
+}
+
+.move-left {
+    order: 0; /* Asegura que "Clave" y "Tipo de accidente" estén alineados correctamente */
+}
+
+.move-below {
+    flex: 1 0 48%; /* Ancho flexible del 48% para ajustar el segundo campo de Clave */
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.align-right {
+    justify-content: flex-end; /* Alinea los elementos hacia la derecha */
+}
+
+.move-right {
+    order: 1; /* Asegura que los elementos se alineen a la derecha */
+    flex: 1; /* Mantén el ancho de los elementos para que no se expanda más de lo necesario */
+}
+
+.small {
+    flex: 0 0 auto; /* Los hace pequeños para que ocupen solo el espacio necesario */
+    max-width: 120px; /* Ajusta el ancho máximo para que sean pequeños */
+}
+
+input[type="text"].small {
+    width: 100%; /* Asegura que los campos se ajusten al ancho máximo definido */
+    padding: 5px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.kilometer-section {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+.flex-grow {
+    flex-grow: 1; /* Permite que los elementos se expandan para ocupar el espacio */
+}
+
+.kilometer-row {
+    display: flex;
+    gap: 10px; /* Espacio entre los campos */
+    justify-content: space-evenly; /* Distribuirlos de forma uniforme */
+}
+
+.input-container.hora-container {
+    justify-content: flex-end; /* Mueve el campo "Hora" hacia la derecha */
+    margin-top: -20px; /* Ajusta el valor negativo para mover hacia arriba */
+    display: flex;
+}
+
+.kilometer-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap; /* Mantiene todos los elementos de la fila juntos */
+    justify-content: space-between; /* Distribuye uniformemente los elementos */
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+
+
+
+
+
+.input-container.hora-container {
+    justify-content: flex-end !important;
+    margin-top: -20px !important;
+    display: flex !important;
+}

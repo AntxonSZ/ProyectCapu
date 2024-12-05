@@ -1,0 +1,113 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Estilos para el cuerpo y el contenedor principal */
+  body {
+    background-color: #f4f7fb;
+    color: #333;
+  }
+  
+  .navbar {
+    background-color: #1a3a5e; /* Color azul */
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  .navbar-title {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .accident-container {
+    margin: 30px auto;
+    width: 80%;
+    max-width: 1200px;
+  }
+  
+  /* Contenedor de la lista de accidentes */
+  .accident-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Estilo para la fila de los encabezados */
+  .accident-item.header {
+    font-weight: bold;
+    background-color: #ffffff;
+    color: white;
+    padding: 10px 15px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr; /* Cuatro columnas de tamaños flexibles */
+    border-radius: 8px;
+  }
+  
+  /* Estilo para cada ítem de accidente */
+  .accident-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr; /* Cuatro columnas de tamaños flexibles */
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Estilo cuando el ítem es hover */
+  .accident-item:hover {
+    background-color: #e6f7ff;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo para las claves */
+  .accident-key {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1a3a5e;
+  }
+  
+  /* Estilo para los conceptos */
+  .accident-concept {
+    font-size: 18px;
+    color: #555;
+    text-align: left;
+  }
+  
+  /* Estilo para las medidas */
+  .accident-measure {
+    font-size: 16px;
+    color: #777;
+    text-align: center;
+  }
+  
+  /* Estilo para los valores */
+  .accident-value {
+    font-size: 16px;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .accident-container {
+      width: 90%;
+    }
+    
+    .accident-item.header {
+      grid-template-columns: 1fr 3fr 1fr 1fr;
+    }
+  
+    .accident-item {
+      grid-template-columns: 1fr 3fr 1fr 1fr;
+    }
+  }
+  

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categorías</title>
+  <link rel="stylesheet" href="Categorias.css">
+</head>
+<body>
+
+  <!-- Encabezado en azul con logo, mensaje de bienvenida y botón de categorías -->
+  <header class="navbar">
+    <div class="navbar-content">
+      <img src="CAPUFENL.png" alt="Tu Logo" class="logo">
+      <button class="menu-toggle" onclick="toggleMenu()">☰ Categorías</button>
+      <h1 id="welcome-message" class="navbar-title">¿Qué deseas hacer, Eduardo?</h1>
+    </div>
+  </header>
+
+  <!-- Menú de categorías horizontal -->
+  <div class="categories-menu" id="categories-menu">
+    <ul class="categories-list">
+      <li onclick="goToConsulta()">Consulta</li>
+      <li onclick="goToBaseDatos()">Base de datos</li>
+      <li onclick="goToTipoAccidente()">Tipo de Accidente</li>
+      <li onclick="goToEdición()">Edición</li>
+      <li onclick="goToTabulador()">Tabulador de daños </li>
+      <li onclick="goToPersonal()">Personal </li>
+    </ul>
+  </div>
+
+  <!-- Sección principal de opciones -->
+  <main class="main-content">
+    <div class="option-card" onclick="goToCaptura()">
+      <div class="overlay"></div>
+      <h2>Captura</h2>
+    </div>
+    <div class="option-card" onclick="goToConsulta()">
+      <div class="overlay"></div>
+      <h2>Consulta</h2>
+    </div>
+    <div class="option-card" onclick="goToBaseDatos()">
+      <div class="overlay"></div>
+      <h2>Base de datos</h2>
+    </div>
+  </main>
+
+  <script src="Categorias.js"></script>
+</body>
+</html>   

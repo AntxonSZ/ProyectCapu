@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Base de Datos - Reportes</title>
+  <link rel="stylesheet" href="Captura.css">
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header class="navbar">
+    <div class="navbar-content">
+      <h1 class="navbar-title">Base de Datos de Reportes</h1>
+    </div>
+  </header>
+
+  <!-- Menú de categorías -->
+  <div class="categories-menu" id="categories-menu">
+    <ul class="categories-list">
+      <!-- Aquí otros elementos del menú si es necesario -->
+      <li><a href="BaseDatos.html">Base de Datos</a></li>
+      <!-- Más secciones si las tienes -->
+    </ul>
+  </div>
+
+  <!-- Sección principal -->
+  <main class="main-content">
+    <h2>Lista de Reportes</h2>
+    
+    <!-- Aquí incluimos el archivo PHP que trae los reportes desde la base de datos -->
+    <div id="reportes-container">
+      <?php include 'mostrar_reportes.php'; ?>
+    </div>
+
+  </main>
+
+  <script src="Captura.js"></script>
+</body>
+</html>

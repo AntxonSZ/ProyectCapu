@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPUFE - Gobierno de México</title>
+    <link rel="stylesheet" href="estilos1.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-top">
+            <img src="ImagenesP/LOGOM.png" alt="Gobierno de México" class="logo-gob">
+            <div class="login-section">
+                <img src="ImagenesP/Login.png" alt="Ícono de usuario" class="icono-login">
+                        
+                <!-- Seccion para Login y Registro -->
+
+                <a href="Login/Registro.html" id="registro-link"></a> |
+                <a href="Login/Registro.Js" id="login-link"></a>
+
+                <a href="Login/Login.html">Iniciar sesión</a>
+                <a href="Login/Login.js" id="login-link"></a>
+        </div>
+        </div>
+        <div class="header-bottom">
+            <img src="ImagenesP/SCT.png" alt="Secretaría de Infraestructura, Comunicaciones y Transportes" class="logo">
+            <img src="ImagenesP/CAPUFELOGO.png" alt="CAPUFE" class="logo">
+        </div>
+    </header>
+
+    <nav class="main-nav"> 
+        <ul>
+            <li><a href="Paginas/Consulta.html">Consulta</a></li>
+            <li><a href="Paginas/Pagos.html"></a></li>
+        </ul>
+    </nav>
+    
+    
+    <main>
+        <!-- Sección de inicio -->
+        <section id="inicio" class="seccion-activa">
+            
+        </section>
+    
+        <!-- Sección de consulta (oculta inicialmente) -->
+        <section id="consulta" class="seccion-oculta">
+            <h2>Consulta tu siniestro</h2>
+            <form>
+                <label for="numeroSiniestro">Ingresa tu Número de siniestro</label>
+                <input type="text" id="numeroSiniestro" name="numeroSiniestro" placeholder="Ej. 123456789">
+    
+                <label for="plazaCobro">Plaza de cobro que reportó</label>
+                <select id="plazaCobro" name="plazaCobro">
+                    <option value="" disabled selected>Selecciona tu plaza de cobro</option>
+                    <option value="plaza1">Plaza 1</option>
+                    <option value="plaza2">Plaza 2</option>
+                    <option value="plaza3">Plaza 3</option>
+                </select>
+    
+                <button type="submit">Consultar</button>
+            </form>
+        </section>
+    
+        <!-- Sección de pagos (oculta inicialmente) -->
+        <section id="pagos" class="seccion-oculta">
+            <h2>Pagos y Servicios</h2>
+            <p>Aquí puedes realizar pagos de peajes y multas.</p>
+        </section>
+    </main>
+
+   
+    
+
+    <script src="Consulta.js"></script>
+    <script src="Paginas/Pago.js"></script>
+
+    <section class="portafolio">
+        <div class="contenedor">
+            <h2 class="titulo">Portafolio</h2>
+            <div class="galeria-port">
+                <div class="imagen-port">
+                    <img src="ImagenesP/CAPUFELOGO.png" alt="">
+                    <div class="hover-galeria">
+                        <img src="img/icono1.png" alt="">
+                        <p>Nuestro trabajo</p>
+                    </div>
+
+   
+
+</body>
+</html>
+
+</body>
+</html>

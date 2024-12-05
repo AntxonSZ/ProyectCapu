@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Personalizada</title>
+  <link rel="stylesheet" href="Liv.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>Mi Proyecto</h1>
+      <div class="button-container">
+        <button class="menu-button" onclick="showSection('captura')">Captura</button>
+        <button class="menu-button" onclick="showSection('consulta')">Consulta</button>
+        <button class="menu-button" onclick="showSection('edicion')">Edición</button>
+        <button class="menu-button" onclick="showSection('base-datos')">Base de datos</button>
+        <button class="menu-button" onclick="showSection('tipo-accidente')">Tipo de Accidente</button>
+        <button class="menu-button" onclick="showSection('tabulador-danos')">Tabulador de Daños</button>
+        <button class="menu-button" onclick="showSection('personal')">Personal</button>
+      </div>
+    </div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰ Categorías</button>
+
+    <!-- Apartado de Usuario -->
+    <div class="user-container" id="user-container">
+      <span id="user-greeting">Iniciar sesión</span>
+      <i class="lock-icon">🔒</i>
+    </div>
+
+    <!-- Menú desplegable de categorías -->
+    <div class="categories-menu" id="categories-menu">
+      <ul class="categories-list">
+        <li>Mujer</li>
+        <li>Hombre</li>
+        <li>Niños y Niñas</li>
+        <li>Bebés 0 meses a 4 años</li>
+        <li>Zapatos</li>
+        <li>Belleza</li>
+        <li>Deportes</li>
+        <li>Electrónica</li>
+        <li>Hogar</li>
+        <li>Juguetes</li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section id="captura" class="content-section">Contenido de Captura</section>
+    <section id="consulta" class="content-section">Contenido de Consulta</section>
+    <section id="edicion" class="content-section">Contenido de Edición</section>
+    <section id="base-datos" class="content-section">Contenido de Base de Datos</section>
+    <section id="tipo-accidente" class="content-section">Contenido de Tipo de Accidente</section>
+    <section id="tabulador-danos" class="content-section">Contenido de Tabulador de Daños</section>
+    <section id="personal" class="content-section">Contenido de Personal</section>
+  </main>
+
+  <script src="Liv.js"></script>
+</body>
+</html>

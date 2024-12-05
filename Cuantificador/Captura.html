@@ -1,0 +1,181 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuantificador de Daños</title>
+  <link rel="stylesheet" href="Captura.css">
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header class="navbar">
+    <div class="navbar-content">
+      <h1 class="navbar-title">Formulario de Cuantificación de Daños</h1>
+    </div>
+  </header>
+
+  <!-- Formulario de cuantificación -->
+  <main class="quantifier-form">
+    <div class="form-container">
+      <h2>Información del Reporte</h2>
+      <form id="damageForm">
+        <div class="section">
+          <div class="form-group">
+            <label for="plaza-cobro">Plaza de Cobro</label>
+            <select id="plaza-cobro" name="plaza-cobro">
+              <option value="plaza1">PLAZA 26 AMOZOC</option>
+              <option value="plaza2">PLAZA 2</option>
+              <option value="plaza3">PLAZA 3</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="folio-boletin">Folio de Boletín</label>
+            <input type="text" id="folio-boletin" name="folio-boletin" maxlength="15" placeholder="Ej. URP/RMO/1234" required>
+          </div>
+
+          <div class="form-group">
+            <label for="reporte-aseguradora">Reporte de Aseguradora</label>
+            <input type="text" id="reporte-aseguradora" name="reporte-aseguradora" maxlength="20" placeholder="Ej. GNP 01601347645" required>
+          </div>
+
+          <div class="form-group">
+            <label for="numero-siniestro">Número de Siniestro</label>
+            <input type="text" id="numero-siniestro" name="numero-siniestro" maxlength="20" placeholder="Ej. GNP 01601347645" required>
+          </div>
+        </div>
+
+        <!-- Sección 2: Datos del Accidente -->
+        <div class="section">
+          <h3>Datos del Accidente</h3>
+
+          <div class="form-group">
+            <label for="clave">Clave</label>
+            <input type="text" id="clave" name="clave" placeholder="Ej. 1, 2, 3..." maxlength="10" oninput="updateConcept()" required>
+          </div>
+
+          <div class="form-group">
+            <label for="concepto">Concepto</label>
+            <input type="text" id="concepto" name="concepto" disabled />
+          </div>
+
+          <div class="form-group">
+            <label for="kilometro">Kilómetro</label>
+            <input type="text" id="kilometro" name="kilometro" maxlength="8" placeholder="Ej. KM123+456" required>
+          </div>
+
+          <div class="form-group">
+            <label for="cuerpo">Cuerpo</label>
+            <select id="cuerpo" name="cuerpo">
+              <option value="A">A</option>
+              <option value="B">B</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="hora-siniestro">Hora del Siniestro</label>
+            <input type="time" id="hora-siniestro" name="hora-siniestro" required>
+          </div>
+
+          <div class="form-group">
+            <label for="fecha-siniestro">Fecha del Siniestro</label>
+            <input type="date" id="fecha-siniestro" name="fecha-siniestro" required>
+          </div>
+        </div>
+
+        <!-- Contenedor para las secciones de daño -->
+        <div id="damageSectionContainer">
+          <div class="section damage" id="damage1">
+            <h3>Daños causados al camino</h3>
+
+            <!-- Dentro de la sección de clave y concepto -->
+            <div class="form-group clave-container">
+              <label for="clave-dano">Clave</label>
+              <input type="text" class="clave-dano" placeholder="Ej. 35, 36, 37..." maxlength="10" oninput="updateDamageConcept(this)" required>
+            </div>
+
+            <div class="form-group">
+              <label for="concepto-dano">Concepto</label>
+              <textarea class="concepto-dano" oninput="autoResize(this)" placeholder="Escribe el concepto..." required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="cantidad-dano">Cantidad</label>
+              <input type="number" class="cantidad-dano" placeholder="Ej. 3" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="medida-dano">Medida</label>
+              <select class="medida-dano">
+                <option value="pieza">PIEZA</option>
+                <option value="metros">METROS</option>
+                <option value="SD">SIN DAÑOS</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="precio-unitario-display">Precio Unitario</label>
+              <input type="text" class="precio-unitario-display" disabled />
+            </div>
+            <div class="form-group">
+              <label for="subtotal-display">Subtotal</label>
+              <input type="text" class="subtotal-display" disabled />
+            </div>
+          </div>
+        </div>
+
+        <!-- Botón para agregar otro daño -->
+        <button type="button" class="add-damage-btn" onclick="addDamage()">Agregar otro daño</button>
+
+        <div class="form-group">
+            <label for="total-general">CUANTIFIACIÓN Y VALUACIÓN POR</label>
+            <input type="text" id="total-general" name="total-general" disabled />
+        </div>
+        
+
+        <!-- Primer recuadro: Valida daños -->
+<div class="form-group">
+    <label for="valida-danos-clave">Valida daños</label>
+    <input type="text" id="valida-danos-clave" name="valida-danos-clave" placeholder="Ingresa Clave" oninput="updatePersonalInfo()" />
+    <input type="text" id="valida-danos" name="valida-danos" disabled />
+</div>
+
+<!-- Segundo recuadro: Elaboró Evaluación de daños -->
+<div class="form-group">
+    <label for="elaboro-evaluacion-clave">Elaboró Evaluación de daños</label>
+    <input type="text" id="elaboro-evaluacion-clave" name="elaboro-evaluacion-clave" placeholder="Ingresa Clave" oninput="updatePersonalInfo()" />
+    <input type="text" id="elaboro-evaluacion" name="elaboro-evaluacion" disabled />
+</div>
+
+<!-- Tercer recuadro: Recibe en plaza de cobro -->
+<div class="form-group">
+    <label for="recibe-plaza-clave">Recibe en plaza de cobro </label>
+    <input type="text" id="recibe-plaza-clave" name="recibe-plaza-clave" placeholder="Ingresa Clave" oninput="updatePersonalInfo()" />
+    <input type="text" id="recibe-plaza" name="recibe-plaza" disabled />
+</div>
+
+
+<!-- Botón para generar PDF -->
+<button type="button" class="generate-pdf-btn" onclick="generatePDF()">Generar PDF</button>
+
+
+<form id="damageForm" action="GuardarReporte.php" method="POST">
+    <!-- Tu código de los campos del formulario sigue aquí -->
+    <!-- Asegúrate de que todos los campos estén dentro del formulario -->
+
+
+
+        <div class="form-actions">
+          <button type="submit" class="submit-btn">Enviar</button>
+          <button type="reset" class="reset-btn">Restablecer</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="Captura.js"></script>
+  <!-- Incluir jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</body>
+</html>

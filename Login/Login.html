@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión</title>
+  <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="logo">
+      <img src="LOGO_CAPUFE-07.jpg" alt="Logo CAPUFE">
+    </div>
+
+    <form class="login-form">
+      <h2>Inicia sesión</h2>
+
+      <div class="input-group">
+        <label for="employee-id">ID de Empleado*</label>
+        <input type="text" id="employee-id" placeholder="Agregar ID de empleado" required>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Contraseña*</label>
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <onclick="togglePassword()" id="password-icon">
+      </div>
+
+      <!-- Mover el mensaje de error aquí -->
+      <div id="login-error" style="display: none; color: red; margin-top: 5px;">
+        El ID o la Contraseña son incorrectos.
+      </div>
+
+      <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+
+      <button type="submit" class="login-button">Iniciar sesión</button>
+
+      <p>¿No tienes cuenta? <a href="#">Crear cuenta</a></p>
+    </form>
+  </div>
+
+  <script src="Login.js"></script>
+</body>
+</html>
